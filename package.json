@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "rollup": "rollup -c",
+    "prepublish": "tsc && vite build --config vite.build.config.ts",
     "lint": "eslint src/**/*.{ts,tsx} --fix",
     "preview": "vite preview",
     "prepare": "husky install",
@@ -15,6 +17,16 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "babel-core": "^6.26.3",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "ahooks": "^3.7.8",
     "antd": "^5.12.2",
     "axios": "^1.6.2",
@@ -22,7 +34,13 @@
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.21.0",
+    "rollup": "^4.8.0",
+    "rollup-external-modules": "^2.0.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "rollup-plugin-node-externals": "^6.1.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

@@ -45,6 +45,7 @@ export default defineConfig(({ mode }) => {
         }
       }
     },
+
     test: {
       globals: true,
       environment: 'jsdom', //提供浏览器API以模拟浏览器环境

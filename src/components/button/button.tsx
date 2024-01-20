@@ -1,15 +1,13 @@
-import { ButtonProps } from './interface';
-const Button: React.FC<ButtonProps> = ({ onClick, disabled = false }) => {
+import Button from './index.tsx';
+import { IProps } from './interface';
+export default (props: IProps) => {
+  const { onClick, disabled = false } = props;
   return (
     <>
-      <button
+      <Button
         onClick={onClick}
         disabled={disabled}
-      >
-        按钮
-      </button>
+      />
     </>
   );
 };
-
-export default Button;

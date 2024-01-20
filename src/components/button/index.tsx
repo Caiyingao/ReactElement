@@ -1,13 +1,12 @@
-import Button from './button';
-import { ButtonProps } from './interface';
-export default (props: ButtonProps) => {
-  const { onClick, disabled = false } = props;
+import { IProps } from './interface';
+import React from 'react';
+import { Button } from 'antd';
+const BxButton: React.FC<IProps> = props => {
   return (
     <>
-      <Button
-        onClick={onClick}
-        disabled={disabled}
-      />
+      <Button {...props}>{props.children}</Button>
     </>
   );
 };
+
+export default BxButton;
